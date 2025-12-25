@@ -401,7 +401,7 @@ namespace CoAP.Server.Resources
         /// transitively ancestor. If no ancestor defines its own executor, the
         /// thread that has called this method performs the notification.
         /// </summary>
-        /// <seealso cref="Changed(Func<ObserveRelation, Boolean>)"/>
+        /// <seealso cref="Changed(Func&lt;ObserveRelation, Boolean&gt;)"/>
         public void Changed()
         {
             Changed(null);

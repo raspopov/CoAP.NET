@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{96DBCEFE-CE81-4592-9101-9A3659BEC488}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CoAP.Examples</RootNamespace>
+    <AssemblyName>CoAP.Examples.Proxy</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Description>A sample of CoAP server to show how the CoAP framework in C# works</Description>
+    <Title>CoAP Proxy</Title>
+    <Authors>SmeshLink Technology</Authors>
+    <AssemblyVersion>0.13.0.0</AssemblyVersion>
+    <FileVersion>0.13.0.0</FileVersion>
+    <Copyright>Copyright © SmeshLink 2013</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CoAP.NET\CoAP.NET48.csproj">
+      <Project>{45DB1E45-4831-4E4A-BB1E-AE92EEA182E3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CoAP.Proxy\CoAP.Proxy.NET48.csproj">
+      <Project>{B8D6E88E-890B-4220-B994-C5EC7B19D282}</Project>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

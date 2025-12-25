@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{45DB1E45-4831-4E4A-BB1E-AE92EEA182E3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CoAP</RootNamespace>
+    <AssemblyName>CoAP.NET</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DefineConstants>$(DefineConstants);COAPALL</DefineConstants>
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>True</Optimize>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DefineConstants>$(DefineConstants);COAPALL</DefineConstants>
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>coapnet.snk</AssemblyOriginatorKeyFile>
+    <Copyright>Copyright © SmeshLink 2011-2015</Copyright>
+    <Description>A CoAP framework in C#</Description>
+    <Title>CoAP.NET with Drafts</Title>
+    <Authors>SmeshLink Technology</Authors>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="BlockOption.cs" />
+    <Compile Include="Channel\DataReceivedEventArgs.cs" />
+    <Compile Include="Channel\IChannel.cs" />
+    <Compile Include="Channel\IPAddressExtensions.cs" />
+    <Compile Include="Channel\UDPChannel.cs" />
+    <Compile Include="Channel\UDPChannel.NET40.cs" />
+    <Compile Include="CoapClient.cs" />
+    <Compile Include="CoapConfig.cs" />
+    <Compile Include="CoapConstants.cs" />
+    <Compile Include="CoapObserveRelation.cs" />
+    <Compile Include="Code.cs" />
+    <Compile Include="Codec\DatagramReader.cs" />
+    <Compile Include="Codec\DatagramWriter.cs" />
+    <Compile Include="Codec\MessageDecoder.cs" />
+    <Compile Include="Codec\MessageEncoder.cs" />
+    <Compile Include="Codec\IMessageDecoder.cs" />
+    <Compile Include="Codec\IMessageEncoder.cs" />
+    <Compile Include="Deduplication\CropRotation.cs" />
+    <Compile Include="Deduplication\DeduplicatorFactory.cs" />
+    <Compile Include="Deduplication\IDeduplicator.cs" />
+    <Compile Include="Deduplication\NoopDeduplicator.cs" />
+    <Compile Include="Deduplication\SweepDeduplicator.cs" />
+    <Compile Include="EmptyMessage.cs" />
+    <Compile Include="EndPoint\Resources\RemoteResource.cs" />
+    <Compile Include="EndPoint\Resources\Resource.cs" />
+    <Compile Include="ICoapConfig.cs" />
+    <Compile Include="LinkAttribute.cs" />
+    <Compile Include="LinkFormat.cs" />
+    <Compile Include="Log\CommonLoggingManager.cs" />
+    <Compile Include="Log\ConsoleLogManager.cs" />
+    <Compile Include="Log\ILogger.cs" />
+    <Compile Include="Log\ILogManager.cs" />
+    <Compile Include="Log\LogManager.cs" />
+    <Compile Include="Log\NopLogManager.cs" />
+    <Compile Include="Log\TextWriterLogger.cs" />
+    <Compile Include="MediaType.cs" />
+    <Compile Include="Message.cs" />
+    <Compile Include="MessageType.cs" />
+    <Compile Include="Net\ClientMessageDeliverer.cs" />
+    <Compile Include="Net\CoAPEndPoint.cs" />
+    <Compile Include="Net\EndPointManager.cs" />
+    <Compile Include="Net\Exchange.cs" />
+    <Compile Include="Net\IEndPoint.cs" />
+    <Compile Include="Net\IMatcher.cs" />
+    <Compile Include="Net\IMessageDeliverer.cs" />
+    <Compile Include="Net\IOutbox.cs" />
+    <Compile Include="Net\Matcher.cs" />
+    <Compile Include="Observe\ObserveNotificationOrderer.cs" />
+    <Compile Include="Observe\ObservingEndpoint.cs" />
+    <Compile Include="Observe\ObserveManager.cs" />
+    <Compile Include="Observe\ObserveRelation.cs" />
+    <Compile Include="Observe\ReregisterEventArgs.cs" />
+    <Compile Include="Option.cs" />
+    <Compile Include="OptionType.cs" />
+    <Compile Include="Request.cs" />
+    <Compile Include="Response.cs" />
+    <Compile Include="ResponseEventArgs.cs" />
+    <Compile Include="Server\CoapServer.cs" />
+    <Compile Include="Server\IServer.cs" />
+    <Compile Include="Server\Resources\CoapExchange.cs" />
+    <Compile Include="Server\Resources\DiscoveryResource.cs" />
+    <Compile Include="Server\Resources\IResource.cs" />
+    <Compile Include="Server\Resources\Resource.cs" />
+    <Compile Include="Server\Resources\ResourceAttributes.cs" />
+    <Compile Include="Server\Resources\TimerResource.cs" />
+    <Compile Include="Server\ServerMessageDeliverer.cs" />
+    <Compile Include="Spec.cs" />
+    <Compile Include="Stack\AbstractLayer.cs" />
+    <Compile Include="Stack\BlockwiseLayer.cs" />
+    <Compile Include="Stack\BlockwiseStatus.cs" />
+    <Compile Include="Stack\Chain.cs" />
+    <Compile Include="Stack\CoapStack.cs" />
+    <Compile Include="Stack\IEntry.cs" />
+    <Compile Include="Stack\ILayer.cs" />
+    <Compile Include="Stack\LayerStack.cs" />
+    <Compile Include="Stack\ObserveLayer.cs" />
+    <Compile Include="Stack\ReliabilityLayer.cs" />
+    <Compile Include="Stack\TokenLayer.cs" />
+    <Compile Include="Threading\Executors.NET40.cs" />
+    <Compile Include="Threading\IExecutor.cs" />
+    <Compile Include="Threading\NoThreadingExecutor.cs" />
+    <Compile Include="Threading\ThreadPoolExecutor.cs" />
+    <Compile Include="Threading\TaskExecutor.cs" />
+    <Compile Include="Util\ArrayEqualityComparer.cs" />
+    <Compile Include="Util\ByteArrayUtils.cs" />
+    <Compile Include="Util\Scanner.cs" />
+    <Compile Include="Util\System.Collections.Generic\SynchronizedCollection.cs" />
+    <Compile Include="Util\ThrowHelper.cs" />
+    <Compile Include="Util\Utils.cs" />
+    <Compile Include="Util\WaitFuture.cs" />
+    <Compile Include="WebLink.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="coapnet.snk" />
+    <None Include="README" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Common.Logging" Version="3.4.1" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+  </ItemGroup>
+</Project>

@@ -294,13 +294,24 @@ namespace CoAP.Channel
         {
             UDPSocket socket = NewUDPSocket(addressFamily, bufferSize);
 
+            try
+            {
+                socket.Socket.EnableBroadcast = true;
+                socket.Socket.ExclusiveAddressUse = false;
+                socket.Socket.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
+            }
+            catch (Exception)
+            {
+                // ignore
+            }
+
             // do not throw SocketError.ConnectionReset by ignoring ICMP Port Unreachable
             const Int32 SIO_UDP_CONNRESET = -1744830452;
             try
             {
                 socket.Socket.IOControl(SIO_UDP_CONNRESET, new Byte[] { 0 }, null);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 // ignore
             }

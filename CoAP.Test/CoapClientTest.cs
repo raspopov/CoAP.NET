@@ -69,6 +69,7 @@ namespace CoAP
 
             // Observe the resource
             _expected = CONTENT_2;
+            _notifications = 0;
             CoapObserveRelation obs1 = client.Observe(response =>
                 {
                     Interlocked.Increment(ref _notifications);
@@ -142,6 +143,7 @@ namespace CoAP
             Thread.Sleep(100);
 
             // Observe the resource
+            _notifications = 0;
             _expected = CONTENT_2;
             CoapObserveRelation obs1 = client.ObserveAsync(response =>
                 {

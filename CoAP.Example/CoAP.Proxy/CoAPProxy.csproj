@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectGuid>{96DBCEFE-CE81-4592-9101-9A3659BEC488}</ProjectGuid>
+    <RootNamespace>CoAP.Examples</RootNamespace>
+    <Title>CoAP Proxy</Title>
+    <Description>A sample of CoAP server to show how the CoAP framework in C# works</Description>
+    <Copyright>Copyright © SmeshLink 2013</Copyright>
+    <Authors>SmeshLink Technology</Authors>
+    <OutputType>Exe</OutputType>
+    <Version>0.13.0</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CoAP.NET\CoAP.NET.csproj">
+      <Project>{45DB1E45-4831-4E4A-BB1E-AE92EEA182E3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CoAP.Proxy\CoAP.Proxy.csproj">
+      <Project>{B8D6E88E-890B-4220-B994-C5EC7B19D282}</Project>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

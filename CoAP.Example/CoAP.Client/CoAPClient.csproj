@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectGuid>{30223FF5-4DCB-45B8-9B06-61EB9FBF9FA8}</ProjectGuid>
+    <RootNamespace>CoAP.Examples</RootNamespace>
+    <Title>CoAP Client</Title>
+    <Description>A sample of CoAP client to show how the CoAP framework in C# works</Description>
+    <Copyright>Copyright © SmeshLink 2011-2012</Copyright>
+    <Authors>SmeshLink Technology</Authors>
+    <OutputType>Exe</OutputType>
+    <Version>0.13.0</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CoAP.NET\CoAP.NET.csproj">
+      <Project>{45DB1E45-4831-4E4A-BB1E-AE92EEA182E3}</Project>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

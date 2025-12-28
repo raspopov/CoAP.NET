@@ -1,0 +1,23 @@
+# This workflow will build a .NET project
+
+name: .NET
+
+on:
+  push:
+    branches: [ "master", "dev" ]
+  pull_request:
+    branches: [ "master", "dev" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Сheckout
+      uses: actions/checkout@v4
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --no-restore
